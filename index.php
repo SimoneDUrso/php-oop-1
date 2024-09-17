@@ -6,6 +6,15 @@ class Movie
     public $plot;
     public $year;
     public $director;
+
+    function __construct($_title, $_genre, $_plot, $_year, $_director)
+    {
+        $this->title = $_title;
+        $this->genre = $_genre;
+        $this->plot = $_plot;
+        $this->year = $_year;
+        $this->director = $_director;
+    }
 }
 ?>
 
