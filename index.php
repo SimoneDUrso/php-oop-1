@@ -3,19 +3,28 @@ class Movie
 {
     public $title;
     public $genre;
-    public $plot;
     public $year;
     public $director;
 
-    function __construct($_title, $_genre, $_plot, $_year, $_director)
+    function __construct($_title, $_genre, $_year, $_director)
     {
         $this->title = $_title;
         $this->genre = $_genre;
-        $this->plot = $_plot;
         $this->year = $_year;
         $this->director = $_director;
     }
+
+    public function infoMovie()
+    {
+        return $this->title . " " . $this->genre . " " . $this->year . " " . $this->director;
+    }
 }
+
+$lotr = new Movie('Lord of the Ring', 'Fantasy, Adventure', '2002-01-18', 'Peter Jackson');
+$sh = new Movie('Il mistero di Sleepy Hollow', 'Horror, Fantasy, Gothic', '1999-11-17', 'Tim Burton');
+$twows = new Movie('The Wolf of Wall Street', 'Comedy, Black humor, Thriller', '2014-01-23', 'Martin Scorsese');
+
+var_dump($lotr, $sh, $twows)
 ?>
 
 <!DOCTYPE html>
