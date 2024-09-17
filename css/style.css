@@ -4,6 +4,81 @@
     box-sizing: border-box;
 }
 
-.card{
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+h1 {
+    color: #343a40;
+    font-size: 2.5rem;
+}
+
+/* Card Styling */
+.card {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
     min-height: 350px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.card-title h2 {
+    font-size: 1.7rem;
+    color: #f8f9fa;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 15px 15px;
+    min-height: 250px;
+}
+
+.card-body p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #f8f9fa;
+}
+
+.card-body strong {
+    color: #f8f9fa;
+}
+
+.card-body .genre {
+    color: #d3d3d3;
+    font-style: italic;
+}
+
+.card-body .fs-4 {
+    font-size: 1.25rem;
+}
+
+/* Card Borders */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg, #ff5e62, #ff9966);
+}
+
+.card-title {
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    min-height: 140px;
 }
