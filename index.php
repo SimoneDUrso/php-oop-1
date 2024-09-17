@@ -19,7 +19,7 @@ include './db.php';
         <h1 class="text-center mb-5 fw-bold">MOVIES</h1>
         <div class="row">
             <!-- primo film -->
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card text-center px-2">
                     <div class="card-title">
                         <h2><strong>Title: </strong><?php echo $lotr->title ?></h2>
@@ -36,7 +36,7 @@ include './db.php';
                 </div>
             </div>
             <!-- secondo film -->
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card text-center px-2">
                     <div class="card-title">
                         <h2><strong>Title: </strong><?php echo $sh->title ?></h2>
@@ -53,7 +53,7 @@ include './db.php';
                 </div>
             </div>
             <!-- terzo film -->
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card text-center px-2">
                     <div class="card-title">
                         <h2><strong>Title: </strong><?php echo $twows->title ?></h2>
