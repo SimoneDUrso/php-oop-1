@@ -1,32 +1,5 @@
 <?php
-class Movie
-{
-    public $title;
-    public $genre;
-    public $year;
-    public $director;
-
-    function __construct($_title, array $_genre, $_year, $_director)
-    {
-        $this->title = $_title;
-        $this->genre = $_genre;
-        $this->year = $_year;
-        $this->director = $_director;
-    }
-
-    public function infoMovie()
-    {
-        return $this->title . " " . $this->year . " " . $this->director;
-    }
-}
-
-$lotr = new Movie('Lord of the Ring', ['Fantasy' . ' ' . 'Adventure'], '2002-01-18', 'Peter Jackson');
-$sh = new Movie('Il mistero di Sleepy Hollow', ['Horror' . ' ' . 'Fantasy' . ' ' . 'Gothic'], '1999-11-17', 'Tim Burton');
-$twows = new Movie('The Wolf of Wall Street', ['Comedy' . ' ' . 'Black humor' . ' ' . 'Thriller'], '2014-01-23', 'Martin Scorsese');
-
-// echo $lotr->infoMovie() . '<br>' . '<br>';
-// echo $sh->infoMovie() . '<br>' . '<br>';
-// echo $twows->infoMovie() . '<br>' . '<br>';
+include './db.php';
 ?>
 
 <!DOCTYPE html>
@@ -37,14 +10,17 @@ $twows = new Movie('The Wolf of Wall Street', ['Comedy' . ' ' . 'Black humor' . 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>php-oop-1</title>
 </head>
 
 <body>
     <div class="container pt-5">
+        <h1 class="text-center mb-5 fw-bold">MOVIES</h1>
         <div class="row">
+            <!-- primo film -->
             <div class="col-4">
-                <div class="card text-center">
+                <div class="card text-center px-2">
                     <div class="card-title">
                         <h2><strong>Title: </strong><?php echo $lotr->title ?></h2>
                     </div>
@@ -59,8 +35,9 @@ $twows = new Movie('The Wolf of Wall Street', ['Comedy' . ' ' . 'Black humor' . 
                     </div>
                 </div>
             </div>
+            <!-- secondo film -->
             <div class="col-4">
-                <div class="card">
+                <div class="card text-center px-2">
                     <div class="card-title">
                         <h2><strong>Title: </strong><?php echo $sh->title ?></h2>
                     </div>
@@ -75,8 +52,9 @@ $twows = new Movie('The Wolf of Wall Street', ['Comedy' . ' ' . 'Black humor' . 
                     </div>
                 </div>
             </div>
+            <!-- terzo film -->
             <div class="col-4">
-                <div class="card">
+                <div class="card text-center px-2">
                     <div class="card-title">
                         <h2><strong>Title: </strong><?php echo $twows->title ?></h2>
                     </div>
